@@ -128,7 +128,7 @@ selected_datetime = datetime.combine(selected_date, selected_time)
 passenger_count = st.selectbox("Number of passengers", [1, 2, 3, 4, 5, 6, 7, 8], index=0)
 
 # API URL
-url = 'https://data-fast-api-1019662996185.europe-west1.run.app'
+url = 'https://taxifare.lewagon.ai/predict'
 
 # Fare estimate button
 if st.button("Get Fare Prediction", type="primary"):
