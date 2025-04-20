@@ -150,30 +150,16 @@ if st.button("Get Fare Prediction", type="primary"):
         st.success(f"### Predicted Fare: ${prediction:.2f}")
 
         # Show route on map (conceptual - would need routing API)
- #       m = create_map()
- #       folium.PolyLine(
- #           locations=[st.session_state.pickup_coords, st.session_state.dropoff_coords],
- #           color="green",
- #           weight=5,
- #           opacity=0.7
- #       ).add_to(m)
- #       st_folium(m, width=1200, height=500)
-
-
-        map_output = st_folium(
-    create_map(),
-
-    width=1200,
-    height=500,
-
-)
-
+        m = create_map()
         folium.PolyLine(
             locations=[st.session_state.pickup_coords, st.session_state.dropoff_coords],
             color="green",
             weight=5,
             opacity=0.7
-        ).add_to(map_output)
+        ).add_to(m)
+        st_folium(m, width=1200, height=500)
+
+
 
 
 
