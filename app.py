@@ -4,6 +4,7 @@ from streamlit_folium import st_folium
 from datetime import datetime, date, time
 import requests
 
+
 # Set page config (must be first Streamlit command)
 st.set_page_config(page_title="NY Taxi Fare Estimator", page_icon="🚖", layout="wide")
 
