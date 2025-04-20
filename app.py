@@ -4,7 +4,6 @@ from streamlit_folium import st_folium
 from datetime import datetime, date, time
 import requests
 
-
 # Set page config (must be first Streamlit command)
 st.set_page_config(page_title="NY Taxi Fare Estimator", page_icon="🚖", layout="wide")
 
@@ -160,8 +159,8 @@ if st.button("Get Fare Prediction", type="primary"):
         ).add_to(m)
         st_folium(m, width=1200, height=500)
 
-    except Exception as e:
-        st.error(f"Error getting prediction: {e}")
+    except :
+        st.error(f"Error getting prediction: ")
         st.markdown('''
             **Note:** If you want to use your own API instead of Le Wagon's,
             replace the URL variable with your API endpoint.
